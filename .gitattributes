@@ -1,0 +1,33 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+*                               text eol=lf
+
+# Denote all resources as binary. So never ever change them when checking our or comiting.
+# We make an exception from this rule for out yml files as these are text files and should be handled as such.
+**/src/*/resources/**           binary
+
+# Denote images as binary
+*.png                           binary
+*.jpg                           binary
+
+# Denote proprietary files as binars
+*.pdf                           binary
+*.xls                           binary
+*.jar                           binary
+test/functional/driver/**       binary
+
+# Denote all source files as text
+*.java                          -binary text eol=lf
+*.groovy                        -binary text eol=lf
+*.js                            -binary text eol=lf
+*.html                          -binary text eol=lf
+*.gradle                        -binary text eol=lf
+*.gradle                        -binary text eol=lf
+*.yml                           -binary text eol=lf
+*.sql                           -binary text eol=lf
+*.txt                           -binary text eol=lf
+*.xsd                           -binary text eol=lf
+*.md                            -binary text eol=lf
+
+# Declare files that will always have CRLF line endings on checkout.
+*.bat                           binary eol=crlf
+*.exe                           binary

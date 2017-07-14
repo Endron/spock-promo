@@ -1,0 +1,14 @@
+# top-most EditorConfig file
+root = true
+
+# basic for all files
+[*]
+end_of_line = lf
+charset = utf-8
+
+# sourcefiles
+[*.{java,groovy,scala,js,gradle,sql,properties,yml,xml,html,json,md}]
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
