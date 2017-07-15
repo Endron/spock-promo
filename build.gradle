@@ -22,12 +22,27 @@
  * SOFTWARE.
  */
 
-plugins {
-  id 'groovy'
+def repos = {
+  jcenter()
+  mavenCentral()
 }
 
+buildscript {
+  repositories {
+    repos()
+  }
+
+  dependencies {
+    classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+  }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'org.asciidoctor.convert'
+
+
 repositories {
-  mavenCentral()
+  repos()
 }
 
 dependencies {
