@@ -22,31 +22,16 @@
  * SOFTWARE.
  */
 
-def repos = {
+apply plugin: 'groovy'
+
+repositories {
   jcenter()
   mavenCentral()
 }
 
-buildscript {
-  repositories {
-    repos()
-  }
-
-  dependencies {
-    classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
-  }
-}
-
-apply plugin: 'groovy'
-apply plugin: 'org.asciidoctor.convert'
-
-
-repositories {
-  repos()
-}
-
 dependencies {
   compile 'org.codehaus.groovy:groovy-all:2.4.11'
+
   testCompile 'junit:junit:4.12'
   testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
 }
